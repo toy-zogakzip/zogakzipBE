@@ -1,0 +1,56 @@
+const data = [
+    {
+        name: "abc",
+        password: "1111",
+        imageUrl: "i1",
+        isPublic: true,
+        introduction: "소개중",
+        createdAt: new Date("2023-03-23T06:34:07.617Z"),
+        updatedAt: new Date("2023-03-23T06:34:07.617Z"),
+    },
+    {
+        name: "def",
+        password: "2222",
+        imageUrl: "i2",
+        isPublic: false,
+        introduction: "소개2222",
+        createdAt: new Date("2023-03-23T06:34:08.617Z"),
+        updatedAt: new Date("2023-03-23T06:34:08.617Z"),
+    },
+    {
+        name: "가나다",
+        password: "3333",
+        imageUrl: "i3",
+        isPublic: true,
+        introduction: "소개33333",
+        createdAt: new Date("2023-03-23T06:34:09.617Z"),
+        updatedAt: new Date("2023-03-23T06:34:09.617Z"),
+    },
+    {
+        name: "이름4",
+        password: "4444",
+        imageUrl: "i4",
+        isPublic: false,
+        introduction: "소개4333",
+        createdAt: new Date("2023-03-23T06:34:10.617Z"),
+        updatedAt: new Date("2023-03-23T06:34:10.617Z"),
+    },
+    {
+        name: "5번",
+        password: "555",
+        imageUrl: "5번image",
+        isPublic: true,
+        introduction: "what's wrong",
+        createdAt: new Date("2023-03-23T06:34:10.617Z"),
+        updatedAt: new Date("2023-03-23T06:34:10.617Z"),
+    },
+    {
+        name: "6번",
+        password: "6666",
+        imageUrl: "6번image",
+        isPublic: true,
+        introduction: "what's wrong again",
+    },
+];
+
+export default data;
