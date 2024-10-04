@@ -75,9 +75,8 @@ export const deleteGroupService = async (groupId, password) => {
     const group = await Group.findById(groupId);
     if (!group) throw new Error("Group not found"); // 그룹이 없으면 404 처리
     if (group.password !== password) throw new Error("Incorrect password"); // 비밀번호가 일치하지 않으면 403 처리
-    // 그룹 삭제 (remove 대신 deleteOne 또는 findByIdAndDelete 사용)
+    //group 삭제
     await Group.findByIdAndDelete(groupId);
-    return; // 삭제 완료
 };
 
 //그룹 상세 정보 조회

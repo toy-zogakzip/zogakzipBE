@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import { DATABASE_URL } from "./env.js";
 import groupRoutes from "./routes/groupRoute.js";
+import postRoutes from "./routes/postRoute.js";
 import * as dotenv from "dotenv";
 import cors from "cors";
 
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 
 // 라우트 설정
 app.use("/api", groupRoutes); // 그룹 관련 API
+app.use("/api", postRoutes); // 게시글 관련 API
 
 mongoose.connect(DATABASE_URL).then(() => console.log("Connected to DB"));
 
