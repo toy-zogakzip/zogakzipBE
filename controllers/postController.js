@@ -1,4 +1,5 @@
 import { createPostService, getPostListService, updatePostService, deletePostService, getPostDetailService, verifyPostPasswordService, likePostService, checkPostPublicService } from "../services/postService.js";
+import { checkBadgeCategory } from "../services/badgeService.js";
 
 //게시글 등록
 export const createPost = async (req, res) => {
