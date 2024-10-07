@@ -4,7 +4,12 @@ import { createPostService, getPostListService, updatePostService, deletePostSer
 export const createPost = async (req, res) => {
     try {
         const groupId = req.params.groupId; //url에서 groupId 가져오기
+        const { nickname, title, content, postPassword, imageUrl, tags, location, moment, isPublic } = req.body;
+        if (!groupId || !nickname || !title || !content || !postPassword) {
+            return res.status(400).json({ message: "잘못된 요청입니다" });
+        }
         const post = await createPostService({ ...req.body, groupId });
+
         const response = {
             id: post.id,
             groupId: post.groupId,
@@ -16,8 +21,8 @@ export const createPost = async (req, res) => {
             location: post.location,
             mement: post.moment,
             isPublic: post.isPublic,
-            likeCount: post.likeCount,
-            commentCount: post.commentCount,
+            likeCount: post.likeCount || 0,
+            commentCount: post.commentCount || 0,
             createdAt: post.createdAt,
         };
         res.status(200).json(response);

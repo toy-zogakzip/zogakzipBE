@@ -42,9 +42,11 @@ export const getPostListService = async ({ groupId, page = 1, pageSize = 10, sor
         .limit(parseInt(pageSize));
 
     console.log("posts: ", posts); //result 확인
+    const totalPages = Math.ceil(totalItemCount / pageSize);
+
     return {
-        currentPage: page,
-        totalPages: Math.ceil(totalItemCount / pageSize),
+        currentPage: parseInt(page),
+        totalPages,
         totalItemCount,
         data: posts.map((post) => ({
             id: post.id,
