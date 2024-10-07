@@ -24,7 +24,9 @@ const GroupSchema = new mongoose.Schema({
     },
     badges: [
         {
-            type: String,
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Badge",
+            default: [],
         },
     ],
 
