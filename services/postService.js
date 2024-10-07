@@ -1,5 +1,6 @@
 import Post from "../models/Post.js";
 import mongoose from "mongoose";
+import { checkAndGetBadges } from "./badgeService.js";
 
 //게시글 등록
 export const createPostService = async (data) => {
@@ -16,7 +17,10 @@ export const createPostService = async (data) => {
         isPublic: data.isPublic,
         createdAt: new Date(),
     });
-    return await newPost.save();
+    const savedPost = await newPost.save();
+    await checkAndGetBadges(savedPost.groupId);
+
+    return savedPost;
 };
 
 //게시글 목록 조회

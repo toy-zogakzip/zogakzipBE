@@ -17,6 +17,13 @@ const badgeSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    badgeUrl: {
+        type: String,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now(),
+    },
 });
 Badge = mongoose.model("Badge", badgeSchema);
 export default Badge;

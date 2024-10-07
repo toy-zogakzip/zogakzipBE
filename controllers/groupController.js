@@ -116,7 +116,7 @@ export const getGroupDetail = async (req, res) => {
             imageUrl: group.imageUrl,
             isPublic: group.isPublic,
             likeCount: group.likeCount,
-            badges: group.badges, // 연결 후 추가 로직 필요
+            badges: group.badges,
             postCount: group.postCount,
             createdAt: group.createdAt,
             introduction: group.introduction,
