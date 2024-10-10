@@ -15,34 +15,4 @@
 
 -   Node.js, Express.js, MongoDB
 
-project/
-│
-├── models/              # 데이터베이스 스키마 정의
-│   ├── Badge.js         # 배지 관련 데이터 모델
-│   ├── Comment.js       # 댓글 관련 데이터 모델
-│   ├── Group.js         # 그룹 관련 데이터 모델
-│   └── Post.js          # 게시글 관련 데이터 모델
-│
-├── controllers/               # API 로직 구현
-│   ├── commentController.js   # 댓글 관련 API 로직
-│   ├── groupController.js     # 그룹 관련 API 로직
-│   ├── imageController.js     # 이미지 관련 API 로직
-│   └── postController.js      # 게시글 관련 API 로직
-│
-├── routes/              # 라우터 설정
-│   ├── commentRoute.js  # 댓글 관련 라우터
-│   ├── groupRoute.js    # 그룹 관련 라우터
-│   ├── imageRoute.js     # 이미지 관련 라우터
-│   └── postRoute.js    # 게시글 관련 라우터
-│
-├── services/            # 기능 설정
-│   ├── badgeService.js    # 배지 관련 라우터
-│   ├── commentService.js     # 댓글 관련 라우터
-│   ├── groupService.js    # 그룹 관련 라우터
-│   ├── postService.js  # 게시글 관련 라우터
-│
-├── uploads/            # 이미지 파일 업로드 폴더
-├── .env                 # 환경 변수 설정 파일
-├── app.js               # Express 서버 설정 및 라우터 연결
-├── package.json         # 프로젝트 설정 및 종속성 관리 파일
-└── README.md            # 프로젝트 설명 파일
+
